@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"io"
 	"os"
 	"strings"
 
@@ -51,10 +52,10 @@ func LoadConfig(path string) (Config, error) {
 	return config, err
 }
 
-// ParseStdin parses menu items from stdin in format: key:label or key:label:value
-func ParseStdin() []Item {
+// ParseItems parses menu items from a reader in format: key:label or key:label:value
+func ParseItems(r io.Reader) []Item {
 	var items []Item
-	scanner := bufio.NewScanner(os.Stdin)
+	scanner := bufio.NewScanner(r)
 
 	for scanner.Scan() {
 		line := strings.TrimSpace(scanner.Text())
@@ -76,4 +77,9 @@ func ParseStdin() []Item {
 	}
 
 	return items
+}
+
+// ParseStdin parses menu items from stdin
+func ParseStdin() []Item {
+	return ParseItems(os.Stdin)
 }
