@@ -1,0 +1,67 @@
+title: "gum-keys"
+
+style:
+  key: "#f5a97f"       # Peach (catppuccin)
+  label: "#cad3f5"     # Text
+  title: "#c6a0f6"     # Mauve
+  submenu: "#eed49f"   # Yellow
+  separator: "#6e738d" # Overlay0
+  border: "rounded"
+
+items:
+  - name: "+Windows"
+    key: w
+    menu:
+      - name: Window 1
+        key: "1"
+        tmux: "select-window -t 1"
+      - name: Window 2
+        key: "2"
+        tmux: "select-window -t 2"
+      - name: Window 3
+        key: "3"
+        tmux: "select-window -t 3"
+      - separator: true
+      - name: New Window
+        key: n
+        tmux: "new-window"
+      - name: Kill Window
+        key: x
+        tmux: "kill-window"
+
+  - name: "+Sessions"
+    key: s
+    menu:
+      - name: Choose
+        key: s
+        tmux: "choose-tree -Zs"
+      - name: New
+        key: n
+        tmux: "new-session"
+      - name: Rename
+        key: r
+        tmux: "command-prompt -I '#S' 'rename-session -- %%'"
+
+  - name: "+Panes"
+    key: p
+    menu:
+      - name: Split Horizontal
+        key: "-"
+        tmux: "split-window -v"
+      - name: Split Vertical
+        key: "|"
+        tmux: "split-window -h"
+      - separator: true
+      - name: Zoom
+        key: z
+        tmux: "resize-pane -Z"
+
+  - separator: true
+
+  - name: Git Status
+    key: g
+    command: "git status"
+
+  - name: Lazygit
+    key: l
+    tmux: "new-window lazygit"
