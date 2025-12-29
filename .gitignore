@@ -1,4 +1,5 @@
 # Binary
+bin/
 gum-keys
 
 # Go build artifacts

@@ -20,6 +20,12 @@ type Style struct {
 	Padding   string `yaml:"padding"`   // Padding inside box
 }
 
+// Layout defines size constraints
+type Layout struct {
+	MaxWidth int `yaml:"max_width"` // Max label width before truncation
+	MaxLines int `yaml:"max_lines"` // Max visible lines before scrolling
+}
+
 // Item represents a menu item
 type Item struct {
 	Name      string `yaml:"name"`      // Display label
@@ -34,9 +40,10 @@ type Item struct {
 
 // Config represents the full configuration
 type Config struct {
-	Title string `yaml:"title"`
-	Style Style  `yaml:"style"`
-	Items []Item `yaml:"items"`
+	Title  string `yaml:"title"`
+	Style  Style  `yaml:"style"`
+	Layout Layout `yaml:"layout"`
+	Items  []Item `yaml:"items"`
 }
 
 // LoadConfig loads configuration from a YAML file
