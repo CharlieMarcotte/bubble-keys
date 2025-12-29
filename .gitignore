@@ -1,6 +1,6 @@
 # Binary
 bin/
-gum-keys
+bubble-keys
 
 # Go build artifacts
 *.exe

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# helpers.sh - Shared utility functions for gum-keys plugin
+# helpers.sh - Shared utility functions for bubble-keys plugin
 #
 
 # Get a tmux option value with a default fallback

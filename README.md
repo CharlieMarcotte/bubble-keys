@@ -1,4 +1,4 @@
-# gum-keys
+# bubble-keys
 
 A keyboard-driven menu TUI for quick actions. Define menus via YAML config or pipe items through stdin.
 
@@ -8,8 +8,8 @@ Built with [Bubble Tea](https://github.com/charmbracelet/bubbletea) and [Lip Glo
 
 ```bash
 # Clone and build
-git clone https://github.com/cmarcotte/gum-keys.git
-cd gum-keys
+git clone https://github.com/cmarcotte/bubble-keys.git
+cd bubble-keys
 make build
 
 # Install to ~/.local/bin
@@ -21,20 +21,20 @@ make install
 ### YAML Config
 
 ```bash
-gum-keys --config menu.yaml
+bubble-keys --config menu.yaml
 ```
 
 ### Stdin (piped input)
 
 ```bash
 # Format: key:label or key:label:value
-echo -e "a:Apple\nb:Banana\nc:Cherry" | gum-keys
+echo -e "a:Apple\nb:Banana\nc:Cherry" | bubble-keys
 ```
 
 ### Override title
 
 ```bash
-gum-keys --config menu.yaml --title "My Menu"
+bubble-keys --config menu.yaml --title "My Menu"
 ```
 
 ## Configuration

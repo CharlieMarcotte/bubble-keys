@@ -33,8 +33,8 @@ func main() {
 		if (stat.Mode() & os.ModeCharDevice) == 0 {
 			config.Items = ParseStdin()
 		} else {
-			fmt.Fprintln(os.Stderr, "Usage: gum-keys --config config.yaml")
-			fmt.Fprintln(os.Stderr, "   or: echo 'key:label' | gum-keys")
+			fmt.Fprintln(os.Stderr, "Usage: bubble-keys --config config.yaml")
+			fmt.Fprintln(os.Stderr, "   or: echo 'key:label' | bubble-keys")
 			os.Exit(1)
 		}
 	}

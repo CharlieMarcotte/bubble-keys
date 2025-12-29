@@ -1,4 +1,4 @@
-module github.com/cmarcotte/gum-keys
+module github.com/cmarcotte/bubble-keys
 
 go 1.25.5
 

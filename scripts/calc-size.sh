@@ -3,7 +3,7 @@
 # calc-size.sh - Read popup dimensions from config
 #
 
-CONFIG_PATH="${1:-$HOME/.config/gum-keys/config.yaml}"
+CONFIG_PATH="${1:-$HOME/.config/bubble-keys/config.yaml}"
 
 # Defaults
 WIDTH=20

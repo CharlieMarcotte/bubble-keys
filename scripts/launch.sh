@@ -6,8 +6,8 @@
 CURRENT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$CURRENT_DIR/helpers.sh"
 
-CONFIG_PATH=$(get_option "@gum-keys-config" "$HOME/.config/gum-keys/config.yaml")
-POSITION=$(get_option "@gum-keys-position" "R,S")
+CONFIG_PATH=$(get_option "@bubble-keys-config" "$HOME/.config/bubble-keys/config.yaml")
+POSITION=$(get_option "@bubble-keys-position" "R,S")
 
 # Calculate dimensions
 read -r WIDTH HEIGHT < <("$CURRENT_DIR/calc-size.sh" "$CONFIG_PATH")
