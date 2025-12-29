@@ -18,7 +18,7 @@ func InitStyles() {
 	separatorStyle = lipgloss.NewStyle().Foreground(lipgloss.Color("240"))
 	titleStyle = lipgloss.NewStyle().Foreground(lipgloss.Color("99")).Bold(true)
 	submenuStyle = lipgloss.NewStyle().Foreground(lipgloss.Color("222"))
-	boxStyle = lipgloss.NewStyle().Border(lipgloss.RoundedBorder()).Padding(0, 1)
+	boxStyle = lipgloss.NewStyle().Border(lipgloss.RoundedBorder()).Padding(0, 0)
 }
 
 // ApplyStyles applies config-defined style overrides
@@ -46,8 +46,10 @@ func ApplyStyles(s Style) {
 			boxStyle = boxStyle.Border(lipgloss.DoubleBorder())
 		case "thick":
 			boxStyle = boxStyle.Border(lipgloss.ThickBorder())
-		case "hidden", "none":
+		case "hidden":
 			boxStyle = boxStyle.Border(lipgloss.HiddenBorder())
+		case "none":
+			boxStyle = boxStyle.BorderStyle(lipgloss.Border{})
 		case "normal":
 			boxStyle = boxStyle.Border(lipgloss.NormalBorder())
 		}
